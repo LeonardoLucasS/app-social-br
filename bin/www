@@ -7,7 +7,6 @@
 var app = require('../app');
 var debug = require('debug')('app:server');
 var http = require('http');
-const normalizePort = require('normalize-port');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -17,7 +16,7 @@ dotenv.config();
  */
 
 const hostname = 'localhost';
-const port = normalizePort(process.env.PORT || '3000');
+const port = (process.env.PORT||3000); //normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
